@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>кто красивее ?</title>
+
+	<meta name="robots" content="index, follow" />
+	<meta name="revisit-after" content="1 hour" />
+
+	<meta name="description" content="кто красивее ?" />
+	<meta name="keywords" content="она,она" />
+
+	<meta property="fb:admins" content="1341124907"/>
+	    
+	<!-- CSS -->
+    <link type="text/css" href="http://s.1001golos.ru/css/frontend.css" rel="stylesheet" media="all" />    <link type="text/css" href="///cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" media="all" />    
+	<!-- JS-->
+    <script type="text/javascript" src="http://s.1001golos.ru/js/libs.js"></script>    <script type="text/javascript" src="http://s.1001golos.ru/js/app.js"></script>		
+	<!-- Counter language -->
+</head>
+<body>
+
+<!-- TOP MENU -->
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a href="/" class="brand">1001Голос.ру | Битвы через социальные сети</a>
+
+			<ul class="nav">
+				<li><a href="/add"><i class="glyphicon glyphicon-plus"></i> Добавить битву</a></li>
+				<li><a href="/browse"><i class="glyphicon glyphicon-fire"></i> Лучшие битвы</a></li>
+				<li class="tests"><a href="/tests"><i class="glyphicon glyphicon-tasks"></i> Тесты</a></li>
+			</ul>
+
+						<ul class="nav pull-right">
+				<li><a href="/signin">Вход</a></li>
+				<li><a href="/signup">Регистрация</a></li>
+			</ul>
+					</div>
+	</div>
+</div>
+
+
+
+
+
+
+</div>
+		</div>
+	</div>
+
+<!-- Page Content -->
+<!-- Battle View -->
+
+
+
+<!-- Vote popup -->
+<div id="vote-options" style="display:none;">
+	<div class="vote-options">
+		<div class="center options">
+			Выберите социальную сеть		</div>
+		<div class="center links big clearfix" >
+			<a href="login.php" class="vk"  title="vKontakte">vKontakte</a>
+
+							<div class="ok" id="okvotesel1" data-vote="1"></div>
+				<div class="ok" id="okvotesel2" data-vote="2"></div>
+																	</div>
+			</div>
+</div>
+
+
+<!-- Battle -->
+<div class="container" style="margin-bottom: 30px;">
+	<div class="row" style="position: relative;">
+		<div class="span12">
+
+			
+			<!-- Back Arrow -->
+			<div id="prev_battle">
+				<a href="/" title="Предыдущая Битва"><div><span>Предыдущая Битва</span></div></a>
+			</div>
+
+			<!-- Next Arrow -->
+			<div class="span2" id="next_battle">
+				<a href="/" title="Следующая Битва"><div><span>Следующая Битва</span></div></a>
+			</div>
+
+			<div class="two-options-content">
+
+			
+			<h1 class="battle-text">Кто победил?</h1>
+
+			<!-- Battle Options -->
+						<div class="battle-options two-options clearfix" id="battle-options">
+
+				<!-- Option ONE -->
+				<div class="battle-option first">
+					<div class="option-image">
+						<div class="battle-image">
+							<img src="http://img2.1001golos.ru/ratings/1397000/1396039/pic1.jpg" alt="она" />
+						</div>
+					</div>
+					<div class="opponent-title">
+						Даша					</div>
+					<div class="votes-number" id="vote-num-1">
+						16					</div>
+					<div class="votes-label">
+						голосов
+					</div>
+																	<div class="option-vote-btn">
+							<a class="btn btn-green" href="#" onclick="battle.initPopup('Возможности голосования', 1);return false">Голосовать</a>
+						</div>
+															</div>
+
+
+
+				<!-- Option TWO -->
+				<div class="option-versus">
+					VS
+									</div>
+
+				<div class="battle-option second">
+					<div class="option-image">
+						<div class="battle-image">
+							<img src="http://img2.1001golos.ru/ratings/1397000/1396039/pic2.jpg" alt="она" />
+						</div>
+					</div>
+					<div class="opponent-title">
+						Мария				</div>
+					<div class="votes-number" id="vote-num-2">
+						24					</div>
+					<div class="votes-label">
+						голосов
+					</div>
+																	<div class="option-vote-btn">
+							<a class="btn btn-orange" href="#" onclick="battle.initPopup('Возможности голосования', 2);return false">Голосовать</a>
+						</div>
+															</div>
+
+
+
+				
+
+
+				
+
+
+				
+			</div>
+
+			
+		</div>
+
+		
+		</div>
+	</div>
+</div>
+
+<!-- Additional Battle Stuff -->
+<div class="container" style="margin: 20px auto;">
+	<div class="row">
+		<div class="span12 battle-additional">
+
+			
+            <div class="battle-actions">
+                <!-- Comment link -->
+               
+
+			<!-- Vote Message -->
+			<div class="battle-voted" id="battle-voted" style="display:none">
+				Спасибо! Ваш голос засчитан.<br />&nbsp;&nbsp;Поделитесь ссылкой на битву в соц. сетях:				<div class="links clearfix">
+					<a href="#" class="vk" onclick="return battle.vote('vk', true)" title="vKontakte">vKontakte</a>
+					<a href="#" class="fb" onclick="return battle.vote('fb', true)" title="Facebook">Facebook</a>
+											<div class="ok" id="okvoted"></div>
+										<a href="#" class="tw" onclick="return battle.vote('tw', true)" title="Twitter">Twitter</a>
+					<a href="#" class="ml" onclick="return battle.vote('ml', true)" title="Mail.Ru">Mail.Ru</a>
+				</div>
+                <a href="#" class="battle-vote-again" onclick="return battle.voteAgainModal('Проголосовать еще раз')">Проголосовать еще раз</a>
+
+
+
+			
+			<div class="battle-timer" id="battle-ended" style="display:none">
+				Битва завершена!			</div>
+
+            
+		</div>
+	</div>
+
+	<!-- Battle advertising link -->
+	<div class="row">
+			</div>
+
+</div>
+
+<script type="text/javascript">
+	var battle;
+
+	battle = new Battle({
+		id     : '1396039',
+        idVote : '1396039:1434732257:942513',
+		url    : 'http://1001golos.ru/1396039',
+		text   : 'кто красивее ?',
+		share1 : 'Мой выбор: она',
+		share2 : 'Мой выбор: она',
+		share3 : 'Мой выбор: ',
+		share4 : 'Мой выбор: ',
+		share5 : 'Мой выбор: ',
+		pic1   : 'http://img2.1001golos.ru/ratings/1397000/1396039/pic1.jpg?1436546657',
+		pic2   : 'http://img2.1001golos.ru/ratings/1397000/1396039/pic2.jpg?1436546657',
+		pic3   : 'http://img2.1001golos.ru/ratings/1397000/1396039/pic3.jpg?1436546657',
+		pic4   : 'http://img2.1001golos.ru/ratings/1397000/1396039/pic4.jpg?1436546657',
+		pic5   : 'http://img2.1001golos.ru/ratings/1397000/1396039/pic5.jpg?1436546657'
+	});
+
+	battle.ok_widget_version = 'new';
+
+		!function (d) {
+		var js = d.createElement("script");
+		js.src = "http://connect.ok.ru/connect.js";
+		js.onload = js.onreadystatechange = function () {
+			if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
+				if (!this.executed) {
+					this.executed = true;
+					setTimeout(function () {onOkConnectReady()}, 0);
+				}
+			}}
+		d.documentElement.appendChild(js);
+	}(document);
+
+	function onOkConnectReady() {
+		var url = battle.url + '?from=ok&sel=';
+		var config1 = "{width:45,height:50,st:'rounded',sz:45,nt:1,nc:1}";
+		var config2 = "{width:125,height:50,st:'rounded',sz:45,ck:1,nc:1}";
+		var config3 = "{width:100,height:100,st:'rounded',sz:100,nt:1,nc:1}";
+
+		
+		OK.CONNECT.insertShareWidget('okvotesel1', url+'1', config3);
+		OK.CONNECT.insertShareWidget('okvotesel2', url+'2', config3);
+						
+		
+		OK.CONNECT.insertShareWidget('okvoted', url+'1', config1);
+	}
+
+		function onOkConnectShare(e) {
+		var args = e.data.split("$");
+		if (args[0] == "ok_shared") {
+							battle.selected = document.id(args[1]).getParent('.ok').get('data-vote');
+			
+			battle.vote_ns();
+		}
+	}
+
+	if (window.addEventListener) {
+		window.addEventListener('message', onOkConnectShare, false);
+	} else {
+		window.attachEvent('onmessage', onOkConnectShare);
+	}
+	
+	</script>
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Footer -->
+<div class="container">
+	<div class="row">
+		<div class="span12">
+			<div id="footer" class="clearfix">
+				<div class="pull-left">
+										Наши проекты: <a href="http://1001mem.ru" target="_blank">1001мем</a>, <a href="http://askbook.me" target="_blank">AskBook</a><br />
+										<a href="/tos">Правила пользования сайтом</a> | <a href="/howitworks">FAQ</a> |
+					<a href="http://askbook.me/support_1001golos" target="_blank">Обратная Связь</a><br />
+					1001golos.ru &copy 2011 &mdash; 2015. Все права защищены. | <a href="/copyright" target="_blank">Сертификат авторских прав<a/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Back to Top -->
+<a id="footer-back-to-top" class="offscreen">
+	<i class="arrow"></i>
+</a>
+
+
+</body>
+</html>
